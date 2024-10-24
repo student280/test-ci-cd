@@ -1,0 +1,28 @@
+name: workflow1
+on: [workflow_dispatch]
+jobs: 
+  job1: 
+   runs-on: ubuntu-latest
+   steps: 
+    - name: step1 
+      run:  uname
+    - name: step2 
+      run:  ls -a
+    - name: step3
+      run:  |
+          echo 'Hello' > test.txt
+          ls -a
+          cat test.txt
+  job2:
+   runs-on: ubuntu-latest
+   steps: 
+    - name: step1 
+      run:  uname
+    - name: step2 
+      run:  ls -a
+    - name: step3
+      run:  |
+          echo 'Hello2' > test.txt
+          ls -a
+          cat test.txt          
+      
